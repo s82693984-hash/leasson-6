@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>QR Code Generators</h2>
+        <input type="text" id="urlInput" placeholder="URL ni kiriting...">
+        <button onclick="generateQR()">QR Code yaratish</button>
+        <div class="options">
+            <label>QR Code rangi: <input type="color" id="fgColor" value="#000000"></label>
+            <label>Fon rangi: <input type="color" id="bgColor" value="#ffffff"></label>
+            <label>Hajm (px): <input type="number" id="size" value="1000" min="100" max="2000"></label>
+        </div>
+        <div id="qrcode"></div>
+    </div>
+
+    <!-- CDN: qrcodejs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
